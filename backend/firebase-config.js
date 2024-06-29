@@ -16,7 +16,7 @@ const serviceAccount = {
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: `https://${process.env.FIREBASE_PROJECT_ID}.firebaseio.com`
+  databaseURL: process.env.FIREBASE_DATABASE_URL
 });
 
 
