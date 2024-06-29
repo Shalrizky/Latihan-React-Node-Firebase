@@ -1,12 +1,7 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const admin = require('firebase-admin');
-const serviceAccount = require('./serviceAccountKey');
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://projek-isengan-default-rtdb.firebaseio.com"
-});
+const admin = require('./firebase-config'); 
 
 const app = express();
 app.use(express.json());
